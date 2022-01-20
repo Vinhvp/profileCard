@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --bg-color:linear-gradient(to right, rgb(28, 148, 58), rgb(31, 161, 140));
+    --text-img-color: #f2726a
+}
+body{
+    height: 100vh;
+    width: 70vw;
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    
+}
+.card {
+    width: 300px;
+    height: 400px;
+    background: #242628;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin: 10px 10px;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center; /*cho ảnh ra giữa*/
+}
+
+.card-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--text-img-color);
+    overflow: hidden; /*Nếu bị tràn bị ẩn đi */
+    margin: 25px auto;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+.card > h2{
+    color: white;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.card > p{
+    color: var(--text-img-color)
+}
+.social{
+    margin: 20px;
+}
+.social>a>i{
+    color: white;
+    margin: 20px 15px;
+    font-size: 25px;
+    transition: color 0.3s ease-in-out;
+}
+.card > button{
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    border: 2px solid var(--text-img-color);
+    background: transparent; /*no solid*/
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out;
+}
+
+.tmp{
+    display: block;
+    margin: 20px;
+    width: 100%;
+    height: 20px;
+}
+@media (hover:hover) {
+    .card > button:hover{
+        background: var(--text-img-color)
+    }
+    .social>a>i:hover{
+        color: var(--text-img-color)
+    }
+    .card > h2:hover{
+        color: var(--text-img-color)
+    }
+    .card-img:hover{
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0 auto;
+        border-radius: unset;
+    }
+}
